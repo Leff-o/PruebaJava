@@ -1,17 +1,18 @@
 #include <iostream>
 #include "LinkedList.h"
 #include "Service.h"
+#include "LinkedList.h"
+#include "OilStation.h"
+#include "Management.h"
 using namespace std;
 int main() {
 
    //LinkedList<OilStation>*oilSta = new LinkedList<OilStation>();
-   //oilSta->addNodeLast(OilStation("12","peque",45));
-  // oilSta->addNodeLast(OilStation("8","medio",60));
- //  cout<<oilSta<<endl;
-  //  LinkedList<Service>*station = new LinkedList<Service>();
+   //cout<<oilSta<<endl;
+   // LinkedList<Service>*station = new LinkedList<Service>();
 
     //station->addNodeLast(Service("828",29,oilSta));
-
+    Management management;
     int opcion;
     do {
         cout << "\n|---------Menu Opciones--------|";
@@ -28,19 +29,27 @@ int main() {
             case 1: {
                 cout << "Ingresar Placa del vehiculo" << endl;
                 std::string vehiclePlate;
+                int galones;
+                double value;
                 cin >> vehiclePlate;
-                cout << "Ingresar id estacion" << endl;
                 cout << "cantidad galones" << endl;
+                cin>> galones;
+                cout << "precio" << endl;
+                cin>> value;
+                management.addService(vehiclePlate,galones,value);
             }
                 break;
             case 2:{
                 std::string idStation;
                 cout << "Ingresar el id de la estacion de servicio" << endl;
                 cin>> idStation;
-
+                management.countServices(idStation);
             }
                 break;
             case 3:{
+                cout << "Ingresar Placa del vehiculo" << endl;
+                std::string vehiclePlate;
+                cin>> vehiclePlate;
 
             }
                 break;

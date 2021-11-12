@@ -10,6 +10,17 @@ LinkedList<T>::LinkedList() {
 }
 
 template<class T>
+void LinkedList<T>::addNodeFirst( T info ) {
+    if( isEmpty( ) ){
+        head = new Node<T>( info );
+    }else{
+        Node<T>* newNode = new Node<T>( info );
+        newNode->next = head;
+        head = newNode;
+    }
+}
+
+template<class T>
 void LinkedList<T>::addNodeLast( T info ) {
 
     Node<T>* newNode = new Node<T>( info );
@@ -48,16 +59,10 @@ Node<T> *LinkedList<T>::findNode(std::string id) {
 }
 
 template<class T>
-std::vector<T> LinkedList<T>::getLinkedList() {
-    std::vector<T> out;
-    Node<T>* aux = head;
-    while( aux != NULL ){
-        out.push_back( aux->info );
-        aux = aux->next;
-    }
-
-    return out;
+vector<T> LinkedList<T>::getLinkedList() {
+    return vector<T>();
 }
+
 template<class T>
 T* LinkedList<T>::findInfo(std::string id) {
     if (isEmpty()){

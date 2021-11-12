@@ -35,6 +35,8 @@ void Service::setServiceValue(double serviceValue) {
     Service::serviceValue = serviceValue;
 }
 
-Service::Service(const string &vehiclePlate, int galons, const OilStation &oiltSta) : vehiclePlate(vehiclePlate),
-                                                                                      galons(galons),
-                                                                                      oiltSta(oiltSta) {}
+Service::Service(const string &vehiclePlate, int galons, double serviceValue) {
+
+}
+
+

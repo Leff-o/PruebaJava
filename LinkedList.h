@@ -15,6 +15,7 @@ public:
 
     LinkedList();
     void addNodeLast( T );
+    void addNodeFirst( T );
     Node<T>* findNode(string);
     std::vector<T> getLinkedList();
     T* findInfo(std::string);

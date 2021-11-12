@@ -17,11 +17,10 @@ private:
     std::string vehiclePlate;
     int galons;
     double serviceValue;
-    OilStation oiltSta;
 
 public:
 
-    Service(const string &vehiclePlate, int galons, const OilStation &oiltSta);
+    Service(const string &vehiclePlate, int galons, double serviceValue);
 
     friend ostream &operator<<(ostream &os, const Service &service);
 

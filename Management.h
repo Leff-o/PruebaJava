@@ -15,7 +15,7 @@ class Management {
 public:
     Management();
    bool addOilStation(string,string,double);
-   bool addService(string,string,int);
+   bool addService(string,int,double);
    int countServices(string);
    double sumService(string);
    double totallyService();
@@ -23,7 +23,7 @@ public:
 private:
     vector<Service*> vectorService;
     vector<OilStation*> vectorOil;
-    OilStation findOilStation(string);
+    OilStation *findOilStation(string);
 };
 
 
