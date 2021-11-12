@@ -25,3 +25,4 @@ double Management::sumService(string) {
 double Management::totallyService() {
     return 0;
 }
+

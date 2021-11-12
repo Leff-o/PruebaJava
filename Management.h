@@ -21,7 +21,9 @@ public:
    double totallyService();
 
 private:
-
+    vector<Service*> vectorService;
+    vector<OilStation*> vectorOil;
+    OilStation findOilStation(string);
 };
 
 
